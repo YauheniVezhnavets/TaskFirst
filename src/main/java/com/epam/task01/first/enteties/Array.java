@@ -20,4 +20,7 @@ public class Array {
     public List<Integer> getElements() {
         return elements;
     }
+
+
+
 }
