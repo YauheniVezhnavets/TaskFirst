@@ -9,9 +9,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-
-
-        Array array = new Array();
+        Array <Integer> array = new Array <Integer>();
         ArrayPrinter arrayPrinter = new ConsoleArrayPrinter();
         arrayPrinter.print(array);
     }

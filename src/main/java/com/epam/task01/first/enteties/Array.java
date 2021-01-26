@@ -4,16 +4,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Array {
+public class Array <Integer>{
 
-    private final List <Integer> elements;
+    private final List<Integer> elements;
 
-    public Array (List<Integer> elements){
-        this.elements=elements;
+    public Array(List<Integer> elements) {
+        this.elements = elements;
     }
 
-    public Array (Integer...elements){
-        this.elements=new ArrayList<Integer>();
+    public Array(Integer... elements) {
+        this.elements = new ArrayList<Integer>();
         this.elements.addAll(Arrays.asList(elements));
     }
 
@@ -22,5 +22,25 @@ public class Array {
     }
 
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        Array<?> array = (Array<?>) o;
+
+        return getElements() != null ? getElements().equals(array.getElements()) : array.getElements() == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return getElements() != null ? getElements().hashCode() : 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Array{" +
+                "elements=" + elements +
+                '}';
+    }
 }
