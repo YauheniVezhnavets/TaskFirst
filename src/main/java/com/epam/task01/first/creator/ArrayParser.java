@@ -8,11 +8,12 @@ import java.util.List;
 
 public class ArrayParser {
 
+    private static final String SPLIT_SEPARATOR = " ";
 
 
     public Array <Integer> parse (String data){
 
-        String  [] strings = data.split(" ");
+        String [] strings = data.split(SPLIT_SEPARATOR);
         List <Integer> parsedArray = new ArrayList<Integer>();
 
         for (String string: strings){

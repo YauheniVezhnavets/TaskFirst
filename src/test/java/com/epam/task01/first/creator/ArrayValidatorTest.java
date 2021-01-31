@@ -36,4 +36,11 @@ public class ArrayValidatorTest {
         Assert.assertFalse(actual);
     }
 
+    @Test
+    public void testValidateShouldNotValidateWhenIncorrectArrayApplied() {
+        String incorrect = "7d 3";
+        boolean actual = arrayValidator.validate(incorrect);
+        Assert.assertFalse(actual);
+    }
+
 }

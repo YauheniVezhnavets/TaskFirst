@@ -1,7 +1,6 @@
 package com.epam.task01.first;
 
 
-import com.epam.task01.first.ArrayCreator;
 import com.epam.task01.first.creator.ArrayParser;
 import com.epam.task01.first.creator.ArrayValidator;
 import com.epam.task01.first.data.DataException;
@@ -22,6 +21,7 @@ public class ArrayCreatorTest {
 
     public final static List<String> TEST_DATA = Arrays.asList("1 3 5", "10 30 45");
 
+
     @Test
     public void testCreateShouldCreateArrayWhenFileHaveCorrectData() throws DataException {
 
@@ -33,11 +33,6 @@ public class ArrayCreatorTest {
 
         ArrayParser parser = Mockito.mock(ArrayParser.class);
         when(parser.parse("1 3 5")).thenReturn(new Array<Integer>(1, 3, 5));
-
-
-      //  when(parser.parse("2d 7")).thenReturn());
-
-
         when(parser.parse("10 30 45")).thenReturn(new Array<Integer>(10, 30, 45));
 
 
